@@ -1,0 +1,62 @@
+.Logo-Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Logo {
+  max-width: 44px;
+}
+
+.Logo-Text {
+  margin-left: 12px;
+  height: 100%;
+  font-style: normal;
+  text-align: left;
+}
+.Logo-Span {
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.Logo-Heading {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  margin: 0;
+}
+
+.Nav {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0px;
+  margin-top: 25px;
+}
+
+.Nav a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  line-height: 16px;
+  letter-spacing: 0em;
+  margin-right: 24px;
+  padding-bottom: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--EPL-White);
+}
+
+.Nav a:hover {
+  padding-bottom: 8px;
+  border-bottom: 4px solid var(--EPL-Pink);
+}
+.Nav a:active {
+  padding-bottom: 8px;
+  border-bottom: 4px solid var(--EPL-Pink);
+}

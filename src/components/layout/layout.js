@@ -6,15 +6,15 @@ import Navigation from "./Navigation"
 
 function Layout({ children }) {
   return (
-    <LayoutContainer>
+    <div className="Layout">
       <Navigation />
-      <Main>{children}</Main>
-      <Footer>
+      <main>{children}</main>
+      <footer>
         © {` `}
         <Link href="https://www.gatsbyjs.com">CSwinton</Link>
         {` `} {new Date().getFullYear()}
-      </Footer>
-    </LayoutContainer>
+      </footer>
+    </div>
   )
 }
 

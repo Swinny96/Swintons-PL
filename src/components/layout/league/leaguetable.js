@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import "./Table.css"
 
 const mainUrl = "https://swintonsplapi.azurewebsites.net/api/"
 
