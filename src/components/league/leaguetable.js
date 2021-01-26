@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const mainUrl = "https://swintonsplapi.azurewebsites.net/api/"
 
@@ -29,42 +29,39 @@ export default class LeagueTable extends Component {
   render() {
     return (
       <div>
-        <h1>Premier League Table</h1>
-        <table className="standings">
-          <tbody>
-            <tr className="table-head">
-              <td className="team-position">Pos</td>
-              <td className="team-name">Team</td>
-              <td title="Matches played">MP</td>
-              <td title="Goals for">GF</td>
-              <td title="Goals against">GA</td>
-              <td title="Goals difference">GD</td>
-              <td title="Team points">Pts</td>
-            </tr>
+        <Table>
+          <TableContents>
+            <TableHead>
+              <Position>Pos</Position>
+              <Club>Team Name</Club>
+              <MatchesPlayed>Matches Played</MatchesPlayed>
+              <TeamGoalsFor>Goals For</TeamGoalsFor>
+              <TeamGoalsAgainst>Goals Against</TeamGoalsAgainst>
+              <TeamGoalsDifference>Goal Diffrence</TeamGoalsDifference>
+              <TeamPoints>Points</TeamPoints>
+            </TableHead>
             {this.state.teams.map((i, idx) => (
-              <tr key={i}>
-                <td className="team-position">{idx + 1}</td>
-
-                <td className="team-name">
-                  <div className="crest">
-                    <img src={i.logoUrl} alt={i.teamName} />
-                  </div>
-                  <span>{i.teamName}</span>
-                </td>
-                <td>{i.played}</td>
-                <td>{i.goalsFor}</td>
-                <td>{i.goalsAgainst}</td>
-                <td>{i.goalDifference}</td>
-                <td>{i.points}</td>
-              </tr>
+              <TableRow>
+                <Postion>{idx + 1}</Postion>
+                <TeamName>
+                  <TeamWrapper>
+                    <CrestImage src={i.logoUrl} alt={i.teamName} />
+                    <TeamText>{i.teamName}</TeamText>
+                  </TeamWrapper>
+                </TeamName>
+                <GoalsFor>{i.goalsFor}</GoalsFor>
+                <GoalsAgainst>{i.goalsAgainst}</GoalsAgainst>
+                <GoalsDifference>{i.goalDifference}</GoalsDifference>
+                <Played>{i.played}</Played>
+                <Points>{i.points}</Points>
+              </TableRow>
             ))}
-          </tbody>
-        </table>
+          </TableContents>
+        </Table>
       </div>
     )
   }
 }
-
 
 const Table = styled.table`
   margin: 0 auto;
@@ -140,7 +137,9 @@ const TeamWrapper = styled.div`
   align-items: center;
 `
 const Crest = styled.div``
-const CrestImage = styled.img``
+const CrestImage = styled.img`
+  margin-right: 8px;
+`
 const Points = styled.td`
   font-weight: bold;
 `
