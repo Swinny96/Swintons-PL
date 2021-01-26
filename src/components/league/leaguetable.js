@@ -28,37 +28,35 @@ export default class LeagueTable extends Component {
 
   render() {
     return (
-      <div>
-        <Table>
-          <TableContents>
-            <TableHead>
-              <Position>Pos</Position>
-              <Club>Team Name</Club>
-              <MatchesPlayed>Matches Played</MatchesPlayed>
-              <TeamGoalsFor>Goals For</TeamGoalsFor>
-              <TeamGoalsAgainst>Goals Against</TeamGoalsAgainst>
-              <TeamGoalsDifference>Goal Diffrence</TeamGoalsDifference>
-              <TeamPoints>Points</TeamPoints>
-            </TableHead>
-            {this.state.teams.map((i, idx) => (
-              <TableRow>
-                <Postion>{idx + 1}</Postion>
-                <TeamName>
-                  <TeamWrapper>
-                    <CrestImage src={i.logoUrl} alt={i.teamName} />
-                    <TeamText>{i.teamName}</TeamText>
-                  </TeamWrapper>
-                </TeamName>
-                <GoalsFor>{i.goalsFor}</GoalsFor>
-                <GoalsAgainst>{i.goalsAgainst}</GoalsAgainst>
-                <GoalsDifference>{i.goalDifference}</GoalsDifference>
-                <Played>{i.played}</Played>
-                <Points>{i.points}</Points>
-              </TableRow>
-            ))}
-          </TableContents>
-        </Table>
-      </div>
+      <Table>
+        <TableContents>
+          <TableHead>
+            <Position>Pos</Position>
+            <Club>Team Name</Club>
+            <MatchesPlayed>Matches Played</MatchesPlayed>
+            <TeamGoalsFor>Goals For</TeamGoalsFor>
+            <TeamGoalsAgainst>Goals Against</TeamGoalsAgainst>
+            <TeamGoalsDifference>Goal Diffrence</TeamGoalsDifference>
+            <TeamPoints>Points</TeamPoints>
+          </TableHead>
+          {this.state.teams.map((i, idx) => (
+            <TableRow>
+              <Postion>{idx + 1}</Postion>
+              <TeamName>
+                <TeamWrapper>
+                  <CrestImage src={i.logoUrl} alt={i.teamName} />
+                  <TeamText>{i.teamName}</TeamText>
+                </TeamWrapper>
+              </TeamName>
+              <GoalsFor>{i.goalsFor}</GoalsFor>
+              <GoalsAgainst>{i.goalsAgainst}</GoalsAgainst>
+              <GoalsDifference>{i.goalDifference}</GoalsDifference>
+              <Played>{i.played}</Played>
+              <Points>{i.points}</Points>
+            </TableRow>
+          ))}
+        </TableContents>
+      </Table>
     )
   }
 }
