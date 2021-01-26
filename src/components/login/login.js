@@ -20,7 +20,7 @@ function LogIn() {
         <br />
         <button className="Login-Button" type="submit">Sign In</button>
         <br />
-        <a className="Login-Link" href="./league/">
+        <a className="Login-Link" href="./table/">
           <img className="Login-Icon" src="/images/icons/login-18dp.svg" />
         </a>
       </form>

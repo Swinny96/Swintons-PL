@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import LeagueTable from "../components/layout/league/leaguetable"
+import LeagueTable from "../components/league/leaguetable"
 import SEO from "../components/layout/seo"
 
 const LeaguePage = () => (
